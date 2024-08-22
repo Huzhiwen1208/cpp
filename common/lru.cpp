@@ -47,8 +47,11 @@ typedef struct LRU {
 
     void put(int key, int value) {
         // 如果已存在，则修改val即可
-        if (this->mapping.find(key) != this->mapping.end())
+        if (this->mapping.find(key) != this->mapping.end()) {
             mapping[key]->val = value;
+            this->delete_node(mapping[key]);
+            this->append_node(mapping[key]);
+        }
         else {
             DoubleLinkedList* s = new DoubleLinkedList(key, value);
 
@@ -57,7 +60,7 @@ typedef struct LRU {
                 DoubleLinkedList* p = this->head->next;
                 this->delete_node(p);
                 this->mapping.erase(p->key);
-                this->capacity --;
+                delete p;
             }
 
             this->mapping[s->key] = s;
