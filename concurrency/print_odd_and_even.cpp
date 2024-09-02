@@ -37,7 +37,7 @@ void print_even() {
 }
 
 // 两个线程交替打印1-100
-int print_odd_and_even_test() {
+void print_odd_and_even_test() {
     printf("\033[35m>>>>>>>>>>> Test print Start <<<<<<<<<<<\033[0m\n");
 
     thread t1(print_odd);
@@ -45,5 +45,5 @@ int print_odd_and_even_test() {
     t1.join();
     t2.join();
 
-    printf("\033[35m>>>>>>>>>>> Test print Start <<<<<<<<<<<\033[0m\n");
+    printf("\033[35m>>>>>>>>>>> Test print Passed <<<<<<<<<<<\033[0m\n");
 }
