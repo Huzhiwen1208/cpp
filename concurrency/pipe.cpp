@@ -18,6 +18,7 @@ void print_numbers(int start, int writer, int reader) {
 }
 
 void pipe_test() {
+    printf("\033[35m>>>>>>>>>>> Test pipe Start <<<<<<<<<<<\033[0m\n");
     int pipe1[2], pipe2[2];
     pipe(pipe1);
     pipe(pipe2);
@@ -47,4 +48,5 @@ void pipe_test() {
     }
 
     cout << endl;
+    printf("\033[35m>>>>>>>>>>> Test pipe Passed <<<<<<<<<<<\033[0m\n");
 }

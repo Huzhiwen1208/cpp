@@ -6,6 +6,7 @@
         "vector": "cpp",
         "istream": "cpp",
         "*.tcc": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "__mutex_base": "cpp"
     }
 }
