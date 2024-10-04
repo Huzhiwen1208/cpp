@@ -1,3 +1,5 @@
+# ref: https://blog.csdn.net/weixin_51483516/article/details/120621135
+
 SOURCES=$(wildcard *.c)
 OBJECTS=$(SOURCES:.c=.o)
 CXX=gcc
